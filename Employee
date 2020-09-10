@@ -1,0 +1,83 @@
+package anusha;
+import java.util.Scanner;
+public class Employee 
+{
+	String name;
+	int yearofjoining;
+	double salary;
+	String address;
+
+	public void getInput()
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter the name: ");
+		name=sc.nextLine();
+		System.out.print("Enter year of joining: ");
+		yearofjoining=sc.nextInt();
+		System.out.print("Enter the salary: ");
+		salary=sc.nextDouble();	
+		System.out.print("Enter the address:");
+		address=sc.next();
+		sc.nextLine();
+	}
+	
+	public void display()
+	{
+		System.out.println("\nEmplyee name: "+name);
+		System.out.println("\nEmplyee joined in year: "+yearofjoining);
+		System.out.println("\nEmployee salary: "+salary);
+		System.out.println("\nEmployee address: "+address);
+	}
+	
+	public static void main(String[] args)
+	{
+		Employee a[] =new Employee[3];
+		for (int i=0;i<3;i++)
+		{
+			a[i]=new Employee();
+			a[i].getInput();
+		}
+		System.out.println("data entered as below");
+		for(int i=0;i<3;i++)
+		{
+			a[i].display();
+		}
+		
+	}
+}
+
+
+INPUT:
+Enter the name: Robert
+Enter year of joining:1994
+Enter  the salary: 64
+Enter the address:C-WallsStreet
+
+Enter the name: Sam
+Enter year of joining: 2000
+Enter  the salary: 68
+Enter the address:D-WallsStreet
+
+Enter the name: john
+Enter year of joining:1999
+Enter  the salary: 26
+Enter the address:B-WallsStreet
+
+
+
+
+OUTPUT:
+ Employee name: Robert
+ Employee joined in year: 1994
+ Employee salary: 64
+ Employee address: C-WallsStreet
+ 
+  Employee name: Sam
+ Employee joined in year: 2000
+ Employee salary: 68
+ Employee address: D-WallsStreet
+ 
+  Employee name: John
+ Employee joined in year: 1999
+ Employee salary: 26
+ Employee address: B-WallsStreet
